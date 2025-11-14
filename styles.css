@@ -1,24 +1,76 @@
+/* Paleta de Cores (Sugestão):
+   - Background (Deserto/Noite): #3A322C (Marrom Escuro / Quase Preto)
+   - Texto (Contraste): #F0E6D2 (Branco Sujo / Areia Clara)
+   - Botão Fundo (Ouro/Sol): #CC9933 (Dourado Forte)
+   - Botão Hover/Ação: #A57F2A (Ouro Escuro)
+*/
+
 body {
-    color: white;
-    background: black;
-    margin: 0px;
+    /* Cor de fundo que lembra o deserto ou a noite no Egito */
+    background-color: #3A322C;
+    /* Cor do texto clara, lembrando a areia/pergaminho */
+    color: #F0E6D2; 
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajustei a altura para ser mais flexível (vh - viewport height) */
+    min-height: 100vh; 
+    margin: 0;
+    padding: 20px; /* Adiciona um pequeno espaçamento para telas pequenas */
 }
 
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
+button {
+    /* Cor de fundo que lembra o ouro ou o sol egípcio */
+    background-color: #CC9933;
+    color: #3A322C; /* Texto escuro para alto contraste no botão dourado */
+    font-family: "Bai Jamjuree", sans-serif;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Adiciona transição suave */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+button:hover {
+    /* Efeito ao passar o mouse */
+    background-color: #A57F2A;
+}
+
+.passo {
+    display: none;
+    /* Adiciona um pequeno padding interno para o conteúdo */
+    padding: 20px; 
+}
+
+.passo.ativo {
+    display: block;
+}
+
+main {
+    text-align: center;
+    max-width: 600px; /* Limita um pouco mais para focar o conteúdo */
+    width: 90%;
+    /* Adiciona um toque visual de moldura, como uma placa antiga */
+    border: 1px solid #CC9933; 
     padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(204, 153, 51, 0.4); /* Sombra dourada */
 }
 
-section {
-	background: rgb(184,156,213);
-	padding-bottom: 80px;
-	padding-top: 80px;
-	display: flex;
-	justify-content: center;
+img {
+    max-width: 100%; /* Garante que a imagem se ajuste ao main */
+    height: auto;
+    margin-bottom: 20px;
+    border: 3px solid #CC9933; /* Borda dourada para imagens */
+    border-radius: 4px;
 }
 
-.chamada-texto {
-    margin-right: 5%;
+p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1.1em;
 }

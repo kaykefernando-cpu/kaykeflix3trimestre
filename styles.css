@@ -1,76 +1,83 @@
-/* Paleta de Cores (Sugestão):
-   - Background (Deserto/Noite): #3A322C (Marrom Escuro / Quase Preto)
-   - Texto (Contraste): #F0E6D2 (Branco Sujo / Areia Clara)
-   - Botão Fundo (Ouro/Sol): #CC9933 (Dourado Forte)
-   - Botão Hover/Ação: #A57F2A (Ouro Escuro)
-*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    /* Cor de fundo que lembra o deserto ou a noite no Egito */
-    background-color: #3A322C;
-    /* Cor do texto clara, lembrando a areia/pergaminho */
-    color: #F0E6D2; 
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    overflow: hidden;
+}
+
+#container {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Ajustei a altura para ser mais flexível (vh - viewport height) */
-    min-height: 100vh; 
-    margin: 0;
-    padding: 20px; /* Adiciona um pequeno espaçamento para telas pequenas */
+    flex-direction: column;
+    text-align: center;
 }
 
-button {
-    /* Cor de fundo que lembra o ouro ou o sol egípcio */
-    background-color: #CC9933;
-    color: #3A322C; /* Texto escuro para alto contraste no botão dourado */
-    font-family: "Bai Jamjuree", sans-serif;
+main {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.1rem;
     border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; /* Adiciona transição suave */
-    font-weight: 600;
-    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out;
 }
 
-button:hover {
-    /* Efeito ao passar o mouse */
-    background-color: #A57F2A;
+.btn:hover {
+    transform: scale(1.05);
 }
 
 .passo {
     display: none;
-    /* Adiciona um pequeno padding interno para o conteúdo */
-    padding: 20px; 
 }
 
 .passo.ativo {
     display: block;
 }
 
-main {
-    text-align: center;
-    max-width: 600px; /* Limita um pouco mais para focar o conteúdo */
-    width: 90%;
-    /* Adiciona um toque visual de moldura, como uma placa antiga */
-    border: 1px solid #CC9933; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(204, 153, 51, 0.4); /* Sombra dourada */
-}
-
-img {
-    max-width: 100%; /* Garante que a imagem se ajuste ao main */
-    height: auto;
-    margin-bottom: 20px;
-    border: 3px solid #CC9933; /* Borda dourada para imagens */
-    border-radius: 4px;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 25px;
-    font-size: 1.1em;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

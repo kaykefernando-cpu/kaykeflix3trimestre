@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,48 +6,83 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Em Busca da Cidade Perdida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>A Oficina Misteriosa</title>
 </head>
 <body>
-    <div id="container">
-        <main>
-            <div class="passo" id="passo-0">
-                <h1>Em busca da cidade perdida</h1>
-                <p>Você encontra uma carta misteriosa sobre uma cidade esquecida, cheia de riquezas e mistérios. Decide seguir as pistas e encontrar essa cidade secreta. Para onde você irá primeiro?</p>
-                <div class="choices">
-                    <button class="btn" data-proximo="1">Rio de Janeiro</button>
-                    <button class="btn" data-proximo="2">Pernambuco</button>
-                </div>
-            </div>
+    <main>
 
-            <div class="passo" id="passo-1">
-                <h2>Rio de Janeiro</h2>
-                <p>Você inicia sua jornada subindo o Pico da Tijuca em busca da primeira pista.</p>
-                <div class="choices">
-                    <button class="btn" data-proximo="3">Procurar a pista no topo do pico</button>
-                    <button class="btn" data-proximo="4">Desistir e voltar para casa</button>
-                </div>
-            </div>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/oficina-inicio.png" alt="">
+            <p>Você é um jovem mecânico que acaba de herdar a antiga oficina do seu avô. Ao explorar o local, encontra um envelope com instruções enigmáticas sobre um “motor lendário” capaz de revolucionar a mecânica automotiva. Sua missão é descobrir como montá-lo.</p>
+            <button class="btn-proximo" data-proximo="1">Investigar o escritório do avô</button>
+            <button class="btn-proximo" data-proximo="2">Explorar o galpão da oficina</button>
+        </div>
 
-            <div class="passo" id="passo-2">
-                <h2>Pernambuco</h2>
-                <p>Você chega a Olinda e começa a explorar. Onde a próxima pista estará escondida?</p>
-                <div class="choices">
-                    <button class="btn" data-proximo="5">Investigar as igrejas antigas</button>
-                    <button class="btn" data-proximo="6">Explorar as praias próximas</button>
-                </div>
-            </div>
+        <div class="passo" id="passo-1">
+            <p>No escritório, você encontra manuais antigos e um diário com a primeira pista: “comece sempre pelo coração do carro”.</p>
+            <button class="btn-proximo" data-proximo="3">Ir para a área dos motores</button>
+            <button class="btn-proximo" data-proximo="4">Ignorar e procurar outra pista</button>
+        </div>
 
-            <!-- Outros passos omitidos para simplicidade -->
+        <div class="passo" id="passo-2">
+            <p>No galpão, há peças antigas espalhadas e uma bancada bagunçada. Entre elas, uma caixa com um símbolo estranho.</p>
+            <button class="btn-proximo" data-proximo="5">Abrir a caixa</button>
+            <button class="btn-proximo" data-proximo="6">Procurar outra coisa no galpão</button>
+        </div>
 
-            <div class="passo" id="passo-11">
-                <h2>Cidade Perdida</h2>
-                <p>Você encontrou a cidade! Tesouros e mistérios à sua espera.</p>
-                <button class="btn" data-proximo="0">Recomeçar a jornada</button>
-            </div>
-        </main>
-    </div>
+        <div class="passo" id="passo-3">
+            <p>Na área dos motores, você encontra um bloco de motor com marcas diferentes. Há um bilhete dizendo: “A próxima etapa está onde o ar ganha vida”.</p>
+            <button class="btn-proximo" data-proximo="7">Ir até o setor de admissão de ar</button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <img src="img/desistiu.png" alt="">
+            <p>Você decide abandonar as pistas. A oficina continua funcionando, mas você sempre se pergunta o que teria descoberto.</p>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>Dentro da caixa, há um carburador antigo com inscrições indicando uma tecnologia avançada perdida ao tempo. Uma etiqueta diz: “Siga para o coração da combustão”.</p>
+            <button class="btn-proximo" data-proximo="7">Ir ao setor de combustão</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p>No resto do galpão, você só encontra peças quebradas. Nada útil por aqui.</p>
+            <button class="btn-proximo" data-proximo="5">Voltar e abrir a caixa</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p>Na área de admissão/combustão, você encontra dois caminhos para resolver o enigma do motor lendário.</p>
+            <button class="btn-proximo" data-proximo="9">Examinar o sistema de admissão</button>
+            <button class="btn-proximo" data-proximo="10">Examinar o sistema de combustão</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <p>Você retorna e finalmente encontra a pista correta. Agora pode seguir.</p>
+            <button class="btn-proximo" data-proximo="7">Voltar ao setor principal</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <p>Analisando o sistema de admissão, você descobre um filtro de ar especial escondido com o mapa final do motor lendário.</p>
+            <button class="btn-proximo" data-proximo="11">Montar o motor lendário</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <p>No sistema de combustão, você encontra peças queimadas e nada útil para o enigma.</p>
+            <button class="btn-proximo" data-proximo="12">Retornar e tentar a admissão</button>
+        </div>
+
+        <div class="passo" id="passo-11">
+            <img src="Img/Motor v12 hybrid.jpg" alt="">
+            <p>Você monta o motor lendário! Uma tecnologia híbrida avançada que combina eficiência extrema com potência impressionante. Agora sua oficina se torna referência nacional.</p>
+        </div>
+
+        <div class="passo" id="passo-12">
+            <p>Voltando à área de admissão, você encontra o mapa escondido.</p>
+            <button class="btn-proximo" data-proximo="11">Montar o motor lendário</button>
+        </div>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
-</html>
